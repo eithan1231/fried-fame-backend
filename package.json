@@ -1,0 +1,24 @@
+{
+  "name": "fried-fame-backend",
+  "version": "1.0.0",
+  "description": "Fried-Fame Backend service responsible for communication with VPN servers and some Analytical data",
+  "main": "index.js",
+  "scripts": {
+		"start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vpn",
+    "fred-fame",
+    "service"
+  ],
+  "author": "Eithan Hersey-Tuit",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "mysql2": "^2.2.5"
+  }
+}
