@@ -24,11 +24,11 @@ const getUserIDByUserID = async(id) => {
 const getSubscriptionInformation = async(user) => {
 	const [rows, fields] = await mysqlPromise.execute(`
 		SELECT
-			user.id AS user_id,
-			user.email AS user_email,
-			user.email_valid AS user_email_valid,
-			user.group_id AS user_group_id,
-			user.node_auth AS user_node_auth,
+			users.id AS user_id,
+			users.email AS user_email,
+			users.email_valid AS user_email_valid,
+			users.group_id AS user_group_id,
+			users.node_auth AS user_node_auth,
 
 			user_subscriptions.subscrption_plan_id AS subscrption_plan_id,
 			user_subscriptions.date AS subscription_data,
