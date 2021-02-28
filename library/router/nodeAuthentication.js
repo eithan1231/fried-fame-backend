@@ -114,7 +114,7 @@ module.exports = async(ctx, next) =>
 		};
 	}
 
-	if(subscriptionInformation.user_node_auth !== ctx.body.password) {
+	if(subscriptionInformation.user_node_auth !== ctx.request.body.password) {
 		return ctx.body = {
 			permitConnection: false,
 			reason: 'bad-password'
