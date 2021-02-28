@@ -131,7 +131,7 @@ module.exports = async(ctx, next) =>
 		};
 	}
 
-	if(subscriptionInformatio.subscription_expiry < Math.floor(Date.now() / 1000)) {
+	if(subscriptionInformation.subscription_expiry < Math.floor(Date.now() / 1000)) {
 		return ctx.body = {
 			permitConnection: false,
 			reason: 'subscription-expired'
