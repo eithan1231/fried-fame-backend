@@ -18,7 +18,7 @@ router.post('/get-node-connection-count', getNodeConnectionCount);
 router.post('/get-user-connection-count', getUserConnectionCount);
 router.post('/is-user-connected-to-node', isUserConnectedToNode);
 router.post('/mark-connected', markConnected);
-router.post('/mark-disconnected', markConnected);
+router.post('/mark-disconnected', markDisconnected);
 router.post('/node-authentication', nodeAuthentication);
 router.post('/nodeauth', nodeAuthentication);// alias
 

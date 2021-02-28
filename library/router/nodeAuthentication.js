@@ -8,7 +8,7 @@ const getUserConnectionCount = require('./getUserConnectionCount').getUserConnec
 // Get Node Information
 const getNodeInformation = async(id) => {
 	const [rows, fields] = await mysqlPromise.execute(`SELECT * FROM vpn_nodes WHERE id = ?`, [id]);
-	return rows ? rows[0] : null;
+	return rows.length ? rows[0] : null;
 }
 
 
@@ -16,7 +16,7 @@ const getNodeInformation = async(id) => {
 const getUserIDByUserID = async(id) => {
 	// basically validates user id exists.
 	const [rows, fields] = await mysqlPromise.execute(`SELECT id FROM users WHERE id = ?`, [id]);
-	return rows ? rows[0].id : null;
+	return rows.length ? rows[0].id : null;
 }
 
 
@@ -55,7 +55,7 @@ const getSubscriptionInformation = async(user) => {
 			users.id = ?
 	`, [user]);
 
-	return rows ? rows[0] : null;
+	return rows.length ? rows[0] : null;
 }
 
 /**

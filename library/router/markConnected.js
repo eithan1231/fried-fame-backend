@@ -15,7 +15,7 @@ const markConnected = async(user, node, localIp) =>
 			NULL,
 			?,
 			?,
-			0,
+			UNIX_TIMESTAMP(),
 			0,
 			?,
 			0,
